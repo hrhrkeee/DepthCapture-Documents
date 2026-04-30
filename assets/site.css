@@ -1,72 +1,49 @@
 :root {
   color-scheme: light dark;
-  --bg: #f7f8f5;
-  --text: #18201b;
-  --muted: #5d665f;
-  --panel: #ffffff;
-  --line: #d8ddd5;
-  --accent: #166b5f;
-  --accent-weak: #dcebe7;
+  --bg: #ffffff;
+  --text: #1f2328;
+  --muted: #59636e;
+  --line: #d0d7de;
+  --link: #0969da;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121613;
-    --text: #eef3ee;
-    --muted: #adb8b0;
-    --panel: #1b211d;
-    --line: #333d36;
-    --accent: #68c8b8;
-    --accent-weak: #1e3733;
+    --bg: #0d1117;
+    --text: #e6edf3;
+    --muted: #8d96a0;
+    --line: #30363d;
+    --link: #58a6ff;
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 40px 24px;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 a {
-  color: var(--accent);
-}
-
-.page {
-  width: min(920px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 48px 0 64px;
-}
-
-header {
-  margin-bottom: 32px;
-}
-
-.eyebrow {
-  margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: var(--link);
 }
 
 h1 {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  line-height: 1.08;
-  letter-spacing: 0;
+  margin: 0 0 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--line);
+  font-size: 2rem;
+  line-height: 1.25;
 }
 
 h2 {
-  margin: 36px 0 12px;
+  margin: 32px 0 12px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--line);
   font-size: 1.35rem;
-}
-
-h3 {
-  margin: 24px 0 8px;
-  font-size: 1.05rem;
+  line-height: 1.25;
 }
 
 p,
@@ -78,62 +55,10 @@ ul {
   padding-left: 1.3rem;
 }
 
-.lead {
-  max-width: 720px;
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 1.1rem;
-}
-
-.language-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  padding: 0;
-  list-style: none;
-}
-
-.language-list a,
-.notice,
-.policy {
-  display: block;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-}
-
-.language-list a {
-  padding: 16px;
-  text-decoration: none;
-}
-
-.language-list strong {
-  display: block;
-  color: var(--text);
-}
-
-.language-list span,
-.meta,
 footer {
   color: var(--muted);
-}
-
-.notice {
-  padding: 16px;
-  background: var(--accent-weak);
-}
-
-.policy {
-  padding: clamp(20px, 4vw, 36px);
-}
-
-.meta {
-  margin-top: 8px;
-}
-
-footer {
   border-top: 1px solid var(--line);
-  margin-top: 40px;
-  padding-top: 20px;
-  font-size: 0.92rem;
+  margin-top: 32px;
+  padding-top: 16px;
+  font-size: 0.9rem;
 }
